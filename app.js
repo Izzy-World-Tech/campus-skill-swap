@@ -32,6 +32,15 @@
   };
 
   let savedIds = storage.get("savedIds", []);
+  let skillCredits = storage.get("skillCredits", null);
+
+  if (skillCredits === null) {
+    skillCredits = 1;
+    storage.set("skillCredits", skillCredits);
+  }
+
+  const creditBalance = document.getElementById("credit-balance");
+  creditBalance.textContent = skillCredits + (skillCredits === 1 ? " credit" : " credits");
 
   // ----------------------------------------------------------
   // 2. Put the startup's name and pitch on the page.
