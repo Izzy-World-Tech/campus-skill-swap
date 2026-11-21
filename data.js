@@ -11,16 +11,16 @@
 // ============================================================
 
 const STARTUP = {
-  name: "YourStartup",
-  tagline: "One sentence that says what your startup does.",
-  pitch: "Who is your customer, what problem do they have, and why is your solution better than what they use today?"
+  name: "CampusSkillSwap",
+  tagline: "Exchange skills, earn credits, and learn from fellow StFX students.",
+  pitch: "CampusSkillSwap connects StFX students who want to teach practical skills with peers who want to learn them. Students earn credits by sharing what they know and spend those credits to learn something new from another student."
 };
 
 const LISTINGS = [
-  { id: 1, name: "Sample listing A", category: "Category 1", description: "A short description of this item." },
-  { id: 2, name: "Sample listing B", category: "Category 2", description: "A short description of this item." },
-  { id: 3, name: "Sample listing C", category: "Category 1", description: "A short description of this item." },
-  { id: 4, name: "Sample listing D", category: "Category 3", description: "A short description of this item." },
-  { id: 5, name: "Sample listing E", category: "Category 2", description: "A short description of this item." },
-  { id: 6, name: "Sample listing F", category: "Category 3", description: "A short description of this item." }
+  { id: 1, name: "Maya - Excel Basics", category: "Data Skills", description: "Learn formulas, simple charts, and spreadsheet organization with Maya." },
+  { id: 2, name: "Liam - Python for Beginners", category: "Programming", description: "Practice variables, loops, and small Python projects with Liam." },
+  { id: 3, name: "Aisha - Photography Fundamentals", category: "Creative", description: "Explore composition, lighting, and phone or camera photography with Aisha." },
+  { id: 4, name: "Noah - Graphic Design Essentials", category: "Creative", description: "Create clear layouts and polished graphics with Noah using beginner-friendly tools." },
+  { id: 5, name: "Chloe - Public Speaking Practice", category: "Communication", description: "Build confidence, structure a short speech, and get friendly feedback from Chloe." },
+  { id: 6, name: "Ethan - Beginner Guitar", category: "Music", description: "Learn basic chords, strumming, and a simple song with Ethan." }
 ];
