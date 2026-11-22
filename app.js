@@ -33,6 +33,14 @@
 
   let savedIds = storage.get("savedIds", []);
   let skillCredits = storage.get("skillCredits", null);
+  let bookedIds = storage.get("bookedSessions", []);
+
+  if (!Array.isArray(bookedIds)) {
+    bookedIds = [];
+  }
+  bookedIds = bookedIds.filter(function (id) {
+    return typeof id === "number" && Number.isFinite(id);
+  });
 
   if (skillCredits === null) {
     skillCredits = 1;
@@ -40,7 +48,12 @@
   }
 
   const creditBalance = document.getElementById("credit-balance");
-  creditBalance.textContent = skillCredits + (skillCredits === 1 ? " credit" : " credits");
+
+  function updateCreditBalance() {
+    creditBalance.textContent = skillCredits + (skillCredits === 1 ? " credit" : " credits");
+  }
+
+  updateCreditBalance();
 
   // ----------------------------------------------------------
   // 2. Put the startup's name and pitch on the page.
@@ -87,6 +100,11 @@
   const searchBox = document.getElementById("search-box");
   const emptyMessage = document.getElementById("empty-message");
   const savedCount = document.getElementById("saved-count");
+  const bookingMessage = document.createElement("p");
+  bookingMessage.className = "booking-message";
+  bookingMessage.setAttribute("role", "status");
+  bookingMessage.setAttribute("aria-live", "polite");
+  grid.parentNode.insertBefore(bookingMessage, grid);
 
   function makeCard(item) {
     const card = document.createElement("article");
@@ -112,8 +130,50 @@
       toggleSaved(item.id);
     });
 
-    card.append(tag, title, text, button);
+    const bookButton = document.createElement("button");
+    const alreadyBooked = bookedIds.indexOf(item.id) !== -1;
+    const hasCredits = skillCredits > 0;
+    bookButton.type = "button";
+    bookButton.className = "button secondary booking-button";
+    if (alreadyBooked) {
+      bookButton.textContent = "Booked ✓";
+      bookButton.classList.add("booked");
+      bookButton.disabled = true;
+    } else if (!hasCredits) {
+      bookButton.textContent = "No credits remaining";
+      bookButton.disabled = true;
+    } else {
+      bookButton.textContent = "Book Session";
+      bookButton.addEventListener("click", function () {
+        bookSession(item.id);
+      });
+    }
+
+    const actions = document.createElement("div");
+    actions.className = "card-actions";
+    actions.append(button, bookButton);
+
+    card.append(tag, title, text, actions);
     return card;
+  }
+
+  function bookSession(id) {
+    if (bookedIds.indexOf(id) !== -1) {
+      return;
+    }
+    if (skillCredits <= 0) {
+      bookingMessage.textContent = "No credits remaining.";
+      renderListings();
+      return;
+    }
+
+    bookedIds.push(id);
+    skillCredits -= 1;
+    storage.set("bookedSessions", bookedIds);
+    storage.set("skillCredits", skillCredits);
+    updateCreditBalance();
+    bookingMessage.textContent = "Session booked! 1 credit used.";
+    renderListings();
   }
 
   function toggleSaved(id) {
