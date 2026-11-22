@@ -18,6 +18,7 @@
     <nav aria-label="Main">
       <a href="#home">Home</a>
       <a href="#explore">Explore</a>
+      <a href="#post">Post a Skill</a>
       <a href="#about">About</a>
     </nav>
     <span class="credit-badge" id="credit-balance" aria-label="Skill Credits balance">1 credit</span>
@@ -72,7 +73,43 @@
     </section>
 
     <!-- =======================================================
-         VIEW 3: ABOUT — your team and your story.
+         VIEW 3: POST — add skills and track teaching sessions.
+         ======================================================= -->
+    <section id="post" data-view hidden>
+      <h1>Post a Skill</h1>
+      <p class="muted">Use fictional/demo details only. Posting a skill does not earn credits; complete a teaching session to earn 1 Skill Credit.</p>
+
+      <form class="skill-form" id="skill-form">
+        <div class="form-field">
+          <label for="skill-name">Skill Name</label>
+          <input id="skill-name" name="skillName" type="text" maxlength="80" required>
+        </div>
+        <div class="form-field">
+          <label for="skill-category">Category</label>
+          <input id="skill-category" name="category" type="text" maxlength="40" required>
+        </div>
+        <div class="form-field">
+          <label for="skill-description">Short Description</label>
+          <textarea id="skill-description" name="description" rows="3" maxlength="180" required></textarea>
+        </div>
+        <div class="form-field">
+          <label for="student-name">Student Name</label>
+          <input id="student-name" name="studentName" type="text" maxlength="60" placeholder="e.g., Alex Student" required>
+        </div>
+        <button class="button" type="submit">Post Skill</button>
+        <p class="form-message" id="skill-form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="my-teaching" aria-labelledby="my-teaching-title">
+        <h2 id="my-teaching-title">My Teaching</h2>
+        <p class="muted" id="my-teaching-empty">You haven't posted any skills yet.</p>
+        <div class="grid" id="my-teaching-grid"></div>
+        <p class="form-message" id="teaching-message" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+
+    <!-- =======================================================
+         VIEW 4: ABOUT — your team and your story.
          ======================================================= -->
     <section id="about" data-view hidden>
       <h1>About us</h1>
