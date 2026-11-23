@@ -31,6 +31,64 @@ Copy this block for each session.
 
 **Committed?** Yes — CampusSkillSwap foundation: branding, data, styling.
 
+
+### Session — November 21, 2026 — driver: Individual
+
+**Goal for this session:**
+- Add a Skill Credits balance that stays saved when the page is refreshed.
+
+**Key prompts we gave Copilot:**
+1. Add a Skill Credits balance to the website.
+2. Make the credit balance save using the browser's local storage.
+
+**What worked:**
+- The website displayed the student's credit balance.
+- The balance remained saved after refreshing the page.
+
+**What broke, and how we fixed it:**
+- The credit balance needed to remain available after refreshing. Copilot used local storage to save it in the browser.
+
+**Committed?** Yes — Add persistent Skill Credits balance.
+
+### Session — November 22, 2026 — driver: Individual
+
+**Goal for this session:**
+- Allow students to book a skill session using their Skill Credits.
+
+**Key prompts we gave Copilot:**
+1. Add a Book Session button to the skill listings.
+2. Deduct one credit when a student books a session.
+3. Prevent students from booking the same session more than once.
+
+**What worked:**
+- Students could book a skill session.
+- One credit was deducted after booking.
+- The booking remained saved after refreshing the page.
+
+**What broke, and how we fixed it:**
+- The booking feature needed to prevent duplicate bookings and update the credit balance correctly. Copilot added checks to handle these situations.
+
+**Committed?** Yes — Add skill booking and credit deduction.
+
+### Session — November 22, 2026 — driver: Individual
+
+**Goal for this session:**
+- Allow students to post skills they can teach and earn credits after completing a session.
+
+**Key prompts we gave Copilot:**
+1. Add a Post a Skill page with a form for students.
+2. Display posted skills under My Teaching.
+3. Add a button to mark a teaching session as complete and award one credit.
+
+**What worked:**
+- Students could post their own skills.
+- Posted skills appeared under My Teaching.
+- Completing a teaching session added one credit to the balance.
+
+**What broke, and how we fixed it:**
+- The system needed to prevent students from earning credits more than once for the same session. Copilot added a check to prevent duplicate credit awards.
+
+**Committed?** Yes — Add skill posting and teaching completion.
 ---
 
 ## Things that broke (running list)
