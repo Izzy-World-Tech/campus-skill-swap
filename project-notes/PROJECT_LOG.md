@@ -110,12 +110,26 @@ Everything we wanted but faked or left out — real logins, a real database, pay
 ## Reflection (fill in at the end)
 
 1. What surprised you most about building software with AI?
-What surprised me most was how much decision-making was involved in building the website. I thought I would spend most of my time writing code, but I spent more time deciding how the platform should work and what would be fair to students. Copilot helped with the coding, but I still had to make the important decisions.
+What surprised me most about using AI to build software was that it was not just about writing code. I expected Copilot to help me write code, but I did not expect to spend so much time thinking about how the website should work.
+
+One example was the Skill Credits system. At first, I thought it would be easy. Students teach a skill and earn one credit, then use that credit to learn something from another student. But when I asked Copilot to add the system, it did not get all the rules right.
+
+For example, it was giving students credits for posting a skill. I realized this could be a problem because someone could post many skills and earn credits without teaching anyone. I had to explain the rules more clearly: posting a skill gives no credit, completing a teaching session gives one credit, and booking a session costs one credit. I also had to make sure students could not earn credits twice for the same session.
+
+This experience taught me that AI can help with coding, but it cannot make every important decision for me. I still need to understand what I want to build and explain how it should work.
 
 2. Which parts were easy, and which were hard? Why do you think that is?
-The easiest part was making the website look good because Copilot helped with the colours, layout, and design.
+The easiest part of building the website was the design. When I asked Copilot to change the colours, improve the skill cards, or add a badge to the header, it made the changes quickly. If I did not like how something looked, I could easily ask it to change it. I found this part easier because I could see the results immediately.
 
-The hardest part was making the website work properly and remember changes after refreshing. I had to think about things like what happens when someone books a session twice or has no credits left. I learned that AI can help write the code, but I still need to think about how the features should work.
+The hardest part was making sure the features worked properly. For example, booking a session sounds simple because a student only needs to click a button and use one credit. But I had to think about other situations. What happens if the student has no credits? What happens if they refresh the page? Can they book the same session twice? I had to make sure the website handled all these situations correctly.
+
+Testing was also difficult because a feature could look like it was working even when something was wrong. For example, the booking button could work, but I still needed to refresh the page to check if the booking and credit balance were saved.
+
+I learned that building a website is not only about making it look good. It is also important to test everything and make sure the features work as expected. Copilot helped me write the code, but I still had to check the results and find problems.
 
 3. If a competitor had the same AI tool, how long would it take them to copy your site?
-I think someone could copy my website in a few hours using the same AI tool. However, getting students to use their website would be more difficult. CampusSkillSwap is made for StFX students, and it takes time to build trust and get people involved. Students are more likely to join when they see other students already using the platform. So, copying the website may be easy, but building a good student community would take more time.
+I think someone with the same AI tool could copy the basic design and features of my website in a few hours. AI makes it easier to build websites, so copying the pages and buttons would not take very long.
+
+However, I think it would take much longer to build a real community of students using the platform. CampusSkillSwap is meant for StFX students, and students need to trust the platform before they start using it. They also need other students to teach and learn from.
+
+For example, a student may not want to join if there are only two or three skills available. But if many students are already using the platform, more students may become interested. This means that copying the website is easier than building a strong community around it.
