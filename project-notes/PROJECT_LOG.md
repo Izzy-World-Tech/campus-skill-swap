@@ -4,8 +4,7 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 Team name: Individual Project
 Startup name: CampusSkillSwap
-Live site link: https://legendary-space-halibut-wv4rj7v64rg725xqg-5500.app.github.dev/
-
+Live site link: https://izzy-world-tech.github.io/campus-skill-swap/
 ---
 
 ## Work sessions
