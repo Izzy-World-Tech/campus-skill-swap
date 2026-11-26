@@ -90,17 +90,36 @@ Copy this block for each session.
 **Committed?** Yes — Add skill posting and teaching completion.
 ---
 
+### Session — November 23, 2026 — driver: Individual
+
+**Goal for this session:**
+- Publish the CampusSkillSwap website using GitHub Pages.
+- Test the live website to make sure the main features work.
+
+**Key prompts we gave Copilot:**
+1. Help prepare the website for GitHub Pages.
+2. Check that the website features work correctly.
+
+**What worked:**
+- Successfully published the website.
+- Tested the Explore page, booking feature, and Post a Skill feature.
+- Confirmed that the permanent website link was working.
+
+**What broke, and how we fixed it:**
+- The website preview was not opening at first. I started a Python server and opened port 5500 in Codespaces.
+
+**Committed?** Yes — Update permanent website link.
+
 ## Things that broke (running list)
 
 | Date | What went wrong | What we tried | What finally fixed it |
+|---|---|---|---|
 | November 23, 2026 | The website preview was not opening. | Tried opening the page directly. | Started the Python server and opened port 5500 in Codespaces. |
-| | | | |
 
 ## What a real version would need
 
-Everything we wanted but faked or left out — real logins, a real database, payments, security, moderation, an app, staff, etc. For each one, say **why** it's needed and roughly **how hard or expensive** you think it would be.
-
 | Feature we faked or skipped | Why a real company would need it | How hard / expensive? |
+|---|---|---|
 | Student accounts and verification | To confirm that users are StFX students and help prevent fake accounts. | Medium — requires secure account registration and student verification. |
 | Real database and cloud hosting | To store student profiles, skill listings, bookings, and credit balances safely online. | Medium to high — requires database setup and hosting costs. |
 | Notifications and scheduling | To remind students about booked sessions and prevent missed appointments. | Medium — requires notification services and scheduling features. |
