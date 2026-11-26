@@ -87,3 +87,7 @@ Another risk is that people who are not StFX students could create fake accounts
 There is also a risk that students may experience harassment or feel unsafe during a skill exchange. To reduce this risk, CampusSkillSwap should encourage students to meet in public places on campus. The platform should also have options for users to report or block other students. A clear code of conduct would help users understand the expected behaviour, and reports should be reviewed properly.
 
 Another risk is that students may try to earn credits without completing teaching sessions or may falsely claim that a session was completed. To prevent this, both the teacher and learner should confirm that a session took place before credits are awarded. The platform should also keep a record of completed sessions and provide a way to report disagreements. This would help make the credit system fair for everyone.
+
+## AI Use Disclosure
+
+I used GitHub Copilot and ChatGPT while working on this project. I used GitHub Copilot to help customize the website, add features, fix coding issues, and test how the features worked. I used ChatGPT to brainstorm ideas, understand course concepts, organize my business case, and review and improve my writing. I tested the website myself and reviewed the content to make sure it reflected my understanding of the project.
